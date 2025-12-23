@@ -60,7 +60,7 @@ The audit trail tracks user behavior and system events to detect anomalies or un
 ``` javascript
 {
   userId: { type: String, required: true },
-  action: { type: String }, // e.g., 'LOGIN', 'TRANSFER', 'REGISTER'
+  action: { type: String }, // e.g., 'TRANSFER'
   status: { type: String }, // 'SUCCESS' or 'FAILURE'
   details: { type: String },
   ipAddress: { type: String },
@@ -76,7 +76,7 @@ The audit trail tracks user behavior and system events to detect anomalies or un
 ## Installation
 ### 1. Clone the repository
 ```Bash
-git clone https://github.com/vedangavankar24/securepay.git
+git clone https://github.com/vedantgavankar24/securepay.git
 ```
 ### 2. Install dependencies
 ```Bash
@@ -102,9 +102,8 @@ npm start
 
 ## 📊 API Reference:
 
-|            |                   |            |                                                        |
-| ---------- | ----------------- | ---------- | ------------------------------------------------------ |
 | **Method** | **Endpoint**      | **Access** | **Description**                                        |
+| ---------- | ----------------- | ---------- | ------------------------------------------------------ |
 | `POST`     | `/api/register`   | Public     | Register a new user                                    |
 | `POST`     | `/api/login`      | Public     | Authenticate and receive JWT                           |
 | `POST`     | `/api/transfer`   | User       | Execute fund transfer between accounts                 |
@@ -119,9 +118,15 @@ npm start
 | **Date**   | **Tool Used** | **Purpose**                            | **Outcome**                                                                           |
 |------------|---------------|----------------------------------------|---------------------------------------------------------------------------------------|
 | 21st Dec   | Gemini        | Ensuring data privacy and integrity    | Applied role and user-specific filtering on data fetched from the API                 |
-| 21st Dec   | Gemini        | Security Auditing & Logic Optimization | Implemented *Anti-Pull* validation to prevent negative amount transfers via API       |
+| 21st Dec   | Gemini        | Security Auditing                      | Implemented *Anti-Pull* validation to prevent negative amount transfers via API       |
 | 22nd Dec   | Gemini        | UI/UX Design                           | Refined dashboard layout using Tailwind CSS for better accessibility and font scaling |
 | 23rd Dec   | Chatgpt       | Documentation                          | Readme file formatting                                                                |
 
-#### **Developed as part of the Backend Engineering Selection Process.**
-#### **Focus: Data Consistency, Security Auditing, and Clean Architecture.**
+### AI effectiveness score: 4.5/5
+**Justification:** Logic optimization through AI saved time (~2 hours), but manual testing revealed loopholes, which had to be fixed later.
+
+- Developed as part of the Backend Engineering Selection Process.
+
+- Focus: Data Consistency, Security Auditing, and Clean Architecture.
+
+### Author: Vedant Gavankar
