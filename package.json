@@ -1,0 +1,12 @@
+{
+  "name": "lenden-assignment-root",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\""
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "recharts": "^3.6.0"
+  }
+}
